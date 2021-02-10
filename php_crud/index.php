@@ -1,3 +1,4 @@
+<?php include 'server.php'; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,12 +17,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>John</td>
-                <td>United States</td>
-                <td><a href="#">Edit</a></td>
-                <td><a href="#">Delete</a></td>
-            </tr>
+            <?php while ($row = mysqli_fetch_array($results)): ?>
+                <tr>
+                    <td><?php echo $row['name'] ?></td>
+                    <td><?php echo $row['address'] ?></td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+            <?php endwhile; ?>
         </tbody>
     </table>
     <form action="" method="post">
