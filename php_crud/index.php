@@ -24,5 +24,18 @@
             </tr>
         </tbody>
     </table>
+    <form action="" method="post">
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="input-group">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address">
+        </div>
+        <div class="input-group">
+            <button type="submit" name="save" class="btn">Save</button>
+        </div>
+    </form>
 </body>
 </html>
